@@ -1,5 +1,3 @@
-# def
-
 # 4. turn the strning into individual letters in an array
 
 # 5. Go through each index of string's array, find equivalent of it in the alphabet variable,
