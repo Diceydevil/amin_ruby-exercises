@@ -1,26 +1,25 @@
-# 4. turn the strning into individual letters in an array
-
-# 5. Go through each index of string's array, find equivalent of it in the alphabet variable,
-# shift it (shift_factor) number to the left or right.
-# 6. store the newly characters in the ciphered array.
-# 7. join the ciphered array together in a new variable
-# 7. return the new varibale (ciphered string.)
-
-# 1. have an array made of a - z individual letters
-
-puts "give a string:"
-input = gets.chomp.chars
-puts "select a number as a shift factor:"
+puts "give us a string as an input:"
+user_input = gets.chomp
+puts "how many would you like the Cipher to shift:"
 shift_factor = gets.chomp.to_i
 
-def caesar_cipher(input, shift_factor)
+def caesar_cipher(user_input, shift_factor)
   alphabet = ("a".."z").to_a
-  ciphered = input.map do |char|
-    index_in_alphabet = alphabet.index(char)
-    shifted_index = (index_in_alphabet + shift_factor) % alphabet.length
-    alphabet[shifted_index]
+  result = []
+
+  user_input_array = user_input.split("")
+  user_input_array.each do |input_letter|
+    if alphabet.include?(input_letter)
+      index = alphabet.index(input_letter)
+      cyphered_letter_index = (index + shift_factor) % alphabet.length
+      new_letter = alphabet[cyphered_letter_index]
+      result << new_letter
+    else
+      result << input_letter
+    end
   end
+
+  result.join
 end
 
-result = caesar_cipher(input, shift_factor)
-puts result.join
+puts caesar_cipher(user_input, shift_factor)
