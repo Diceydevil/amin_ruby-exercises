@@ -9,8 +9,8 @@ def sort_wiredly(array)
     result << sorted.shift if sorted.any?
   end
 
-  p result
+  result
 end
 
 array = [15, 11, 10, 7, 12]
-puts sort_wiredly(array)
+p sort_wiredly(array)
