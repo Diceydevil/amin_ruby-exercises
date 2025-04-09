@@ -6,6 +6,5 @@ def sum_scores(scores)
   sum
 end
 
-score = [1, 3, 5, 1]
+score = [1, 3, 500, 1, 10]
 p sum_scores(score)
-puts sum_scores(score)
