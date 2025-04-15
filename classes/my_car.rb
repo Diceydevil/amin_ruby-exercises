@@ -7,21 +7,23 @@
 #
 # Add a class method to your MyCar class that calculates the gas mileage (i.e. miles per gallon) of any car.
 # Override the to_s method to create a user friendly print out of your object.
+#
 # When running the following code...
+#
 # class Person
 # attr_reader :name
 # def initialize(name)
 #   @name = name
 # end
 # end
-
+#
 # bob = Person.new("Steve")
 # bob.name = "Bob"
 #
 # We get the following error...
 # test.rb:9:in `<main>': undefined method `name=' for
 # <Person:0x007fef41838a28 @name="Steve"> (NoMethodError)
-
+#
 # Why do we get this error and how do we fix it?
 
 class MyCar
@@ -35,12 +37,21 @@ class MyCar
     @speed = 0
   end
 
+  def to_s
+    "Your #{year} #{model}, is going #{current_speed} mph."
+  end
+
+  def self.gas_mileage_calculator(distance, fuel_used)
+    mpg = distance / fuel_used.to_f
+    puts "the #{@model}, consumption is #{mpg} miles per gallon"
+  end
+
   def speed_up(amount)
     @speed += amount
   end
 
   def current_speed
-    "The current speed is #{speed}"
+    "The current speed is #{@speed}"
   end
 
   def brake(amount)
