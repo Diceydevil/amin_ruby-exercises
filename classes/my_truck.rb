@@ -1,7 +1,6 @@
-class MyCar < Vehicle
+class MyTruck < Vehicle
   attr_accessor :type
-  TYPE = "Car"
-  include Driftable
+  TYPE = "Truck"
 
   def initialize(year, colour, model)
     super
