@@ -7,19 +7,21 @@ def caesar_cipher(user_input, shift_factor)
   alphabet = ("a".."z").to_a
   result = []
 
-  user_input_array = user_input.split("")
-  user_input_array.each do |input_letter|
-    if alphabet.include?(input_letter)
-      index = alphabet.index(input_letter)
-      cyphered_letter_index = (index + shift_factor) % alphabet.length
-      new_letter = alphabet[cyphered_letter_index]
-      result << new_letter
-    else
-      result << input_letter
-    end
+  user_input.chars.each do |input_letter|
+    result << shift_letter(input_letter, shift_factor, alphabet)
   end
 
   result.join
+end
+
+def shift_letter(input_letter, shift_factor, alphabet)
+  if alphabet.include?(input_letter)
+    index = alphabet.index(input_letter)
+    cyphered_letter_index = (index + shift_factor) % alphabet.length
+    alphabet[cyphered_letter_index]
+  else
+    input_letter
+  end
 end
 
 puts caesar_cipher(user_input, shift_factor)
