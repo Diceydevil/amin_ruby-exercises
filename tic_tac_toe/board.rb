@@ -1,7 +1,7 @@
 # Board class to set the board for the tic tac toe one initialising the game
 class Board
   WIN_LINES = [
-    [0, 1, 2], [4, 5, 6], [7, 8, 9],
+    [1, 2, 3], [4, 5, 6], [7, 8, 9],
     [1, 4, 7], [2, 5, 8], [3, 6, 9],
     [1, 5, 9], [3, 5, 7]
   ]
