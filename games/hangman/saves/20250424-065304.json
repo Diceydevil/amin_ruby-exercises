@@ -1,0 +1,14 @@
+{
+  "secret_word": "newbie",
+  "correct_guesses": [
+    "e",
+    "w"
+  ],
+  "wrong_guesses": [
+    "a",
+    "r",
+    "l",
+    "k"
+  ],
+  "lives_remaining": 3
+}

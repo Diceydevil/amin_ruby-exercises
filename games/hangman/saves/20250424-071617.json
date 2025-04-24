@@ -1,0 +1,15 @@
+{
+  "secret_word": "surgical",
+  "correct_guesses": [
+    "a",
+    "r",
+    "c"
+  ],
+  "wrong_guesses": [
+    "e",
+    "w",
+    "h",
+    "b"
+  ],
+  "lives_remaining": 3
+}
