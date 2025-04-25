@@ -5,6 +5,8 @@ GEM
     json (2.10.2)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
+    macaddr (1.7.2)
+      systemu (~> 2.6.5)
     parallel (1.27.0)
     parser (3.3.8.0)
       ast (~> 2.4.1)
@@ -28,9 +30,12 @@ GEM
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     ruby-progressbar (1.13.0)
+    systemu (2.6.5)
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    uuid (2.3.9)
+      macaddr (~> 1.0)
 
 PLATFORMS
   arm64-darwin-23
@@ -38,6 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   rubocop
+  uuid
 
 BUNDLED WITH
    2.6.6

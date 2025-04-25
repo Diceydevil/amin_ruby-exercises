@@ -1,0 +1,17 @@
+{
+  "name": "Lord Sandwitch",
+  "location": "Bournemouth",
+  "id": "e24de407-586d-4677-ba3d-487fe7b2f658",
+  "products": [
+    {
+      "name": "Mean Sandwitch 1",
+      "price": 4.3,
+      "stock": 12
+    },
+    {
+      "name": "Mean Sandiwitch 2 ",
+      "price": 5.0,
+      "stock": 6
+    }
+  ]
+}
